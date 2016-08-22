@@ -1,0 +1,4 @@
+#!/bin/bash
+sed -e "s/String appVersion = \"2.0\";/String appVersion = \"B\";/" -i "" pcf-ers-demo/src/main/java/io/pivotal/pcf/sme/ers/client/ui/controller/AttendeeService.java
+
+mvn clean package -DskipTests=true -f pcf-ers-demo/pom.xml

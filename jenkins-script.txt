@@ -1,0 +1,37 @@
+node {
+    stage 'Deploy A'
+     sh "cp -rp /Users/williamsj/git/pcf-ers-demo ."
+     sh "./pcf-ers-demo/make_code_change_a"
+     sh "cf push attendees-citi-a -f ./pcf-ers-demo/manifest.yml"
+     sh "cf map-route attendees-citi-a cfapps.io --hostname attendees-citi"
+    stage 'Deploy B'
+     sh "cp -rp /Users/williamsj/git/pcf-ers-demo ."
+     sh "./pcf-ers-demo/make_code_change_b"
+     sh "cf push attendees-citi-b -f ./pcf-ers-demo/manifest.yml"
+     sh "cf map-route attendees-citi-b cfapps.io --hostname attendees-citi"
+ }
+
+node {
+   stage 'Deploy Canary'
+     sh "cp -rp /Users/williamsj/git/pcf-ers-demo ."
+     sh "./pcf-ers-demo/make_code_change_canary"
+     sh "cf push attendees-citi-canary -f ./pcf-ers-demo/manifest.yml"
+   stage 'Test Canary'
+   try {
+    sh "./pcf-ers-demo/canary_test.sh"
+   }
+   catch(err) {
+    stage 'Rollback Canary'
+    sh "cf delete -f attendees-citi-canary"
+    return
+   }
+   stage 'URL Map Canary'
+      sh "cf map-route attendees-citi-canary local2.pcfdev.io --hostname attendees-citi"
+   stage 'Scale Canary'
+      sh "cf scale attendees-citi-canary -i 3"
+    stage 'Delete v2'
+      sh "cf unmap-route attendees-citi local2.pcfdev.io --hostname attendees-citi"
+      sh "cf delete -f attendees-citi"
+
+
+}
