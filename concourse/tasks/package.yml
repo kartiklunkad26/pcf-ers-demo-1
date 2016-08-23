@@ -8,7 +8,9 @@ image_resource:
 
 inputs:
   - name: pcf-ers-demo
-    path: ./pcf-ers-demo
+
+outputs:
+  - name: pcf-ers-demo/target
 
 run:
   path: "pcf-ers-demo/mvnw"
