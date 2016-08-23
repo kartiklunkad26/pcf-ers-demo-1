@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8591b4a8-cb36-42d5-8f13-f9c14175fef3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/tasks/package.yml" afterPath="$PROJECT_DIR$/concourse/tasks/package.yml" />
-    </list>
+    <list default="true" id="8591b4a8-cb36-42d5-8f13-f9c14175fef3" name="Default" comment="" />
     <ignored path="pcf-ers-demo.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,8 +26,8 @@
       <file leaf-file-name="pipeline.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.296297">
-              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+            <state vertical-scroll-proportion="-16.555555">
+              <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -645,12 +643,12 @@
       <created>1471953410568</created>
       <option name="number" value="Default" />
       <updated>1471953410568</updated>
-      <workItem from="1471953413860" duration="10417000" />
+      <workItem from="1471953413860" duration="10945000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10417000" />
+    <option name="totallyTimeSpent" value="10945000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="676" y="87" width="1210" height="898" extended-state="0" />
@@ -755,8 +753,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.296297">
-          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        <state vertical-scroll-proportion="-16.555555">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
           <folding />
         </state>
       </provider>
