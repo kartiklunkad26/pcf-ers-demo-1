@@ -1,14 +1,14 @@
 resources:
-  - name: source-code
+  - name: pcf-ers-demo
     type: git
     source:
       uri: https://github.com/jwilliams-pivotal/pcf-ers-demo.git
       branch: master
 
-  - name: resource-deploy-web-app
+  - name: pcf-deploy-pcf-ers-demo
     type: cf
     source:
-      api: https://api.local.pcfdev.io
+      api: https://api.local2.pcfdev.io
       username: admin
       password: admin
       organization: pcfdev-org
@@ -16,13 +16,20 @@ resources:
       skip_cert_check: true
 
 jobs:
-  - name: package-deploy
+  - name: package
     plan:
-    - get: source-code
+    - get: pcf-ers-demo
       trigger: true
     - task: package
       privileged: true
-      file: source-code/concourse/tasks/package.yml
-    - put: resource-deploy-web-app
+      file: pcf-ers-demo/concourse/tasks/package.yml
+
+  - name: deploy
+    plan:
+    - get: pcf-ers-demo
+      passed: [package]
+    - put: pcf-deploy-pcf-ers-demo
       params:
-        manifest: source-code/manifest.yml
+        manifest: pcf-ers-demo/manifest.yml
+        path: pcf-ers-demo/target/pcf-ers-demo1-0.0.1-SNAPSHOT.jar
+
