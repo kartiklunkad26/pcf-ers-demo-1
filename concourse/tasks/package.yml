@@ -14,5 +14,3 @@ run:
   path: "./mvnw"
   args: ["-f", "./pom.xml", "package"]
 
-params:
-  MAVEN_BASEDIR: pcf-ers-demo
