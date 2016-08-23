@@ -1,11 +1,20 @@
 resources:
-  - name: pcf-ers-demo
-    type: git
+  - name: gh-release-1.0
+    type: github-release
     source:
-      uri: https://github.com/jwilliams-pivotal/pcf-ers-demo.git
-      branch: master
+      user: jwilliams-pivotal
+      repository: pcf-ers-demo
+      version: 1.0
+      cache: false
+  - name: gh-release-2.0
+      type: github-release
+      source:
+        user: jwilliams-pivotal
+        repository: pcf-ers-demo
+        version: 2.0
+        cache: false
 
-  - name: stage-pcf-ers-demo
+  - name: stage-pcf
     type: cf
     source:
       api: https://api.local2.pcfdev.io
@@ -16,14 +25,17 @@ resources:
       skip_cert_check: true
 
 jobs:
-  - name: pcf-ers-demo
+  - name: deploy-1.0
     plan:
-    - get: pcf-ers-demo
-      trigger: true
-    - task: package
-      file: pcf-ers-demo/concourse/tasks/package.yml
-    - put: stage-pcf-ers-demo
+    - get: gh-release-1.0
+    - put: stage-pcf
       params:
-        manifest: pcf-ers-demo/manifest.yml
-
-
+        manifest: gh-release-1.0/manifest.yml
+        path: gh-release-1.0/pcf-ers-demo.jar
+  - name: deploy-2.0
+    plan:
+    - get: gh-release-2.0
+    - put: stage-pcf
+      params:
+        manifest: gh-release-2.0/manifest.yml
+        path: gh-release-2.0/pcf-ers-demo.jar
