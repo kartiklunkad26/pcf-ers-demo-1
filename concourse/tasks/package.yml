@@ -8,10 +8,7 @@ image_resource:
 
 inputs:
   - name: pcf-ers-demo
-
-outputs:
-  - name: jar-file
-    path: output/target/
+    path: .
 
 run:
   path: "pcf-ers-demo/mvnw"
