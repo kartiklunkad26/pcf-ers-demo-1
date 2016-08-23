@@ -10,15 +10,12 @@ inputs:
   - name: pcf-ers-demo
 
 outputs:
-  - name: output/target
+  - name: build-output
+  - path: pcf-ers-demo/target
 
 run:
   path: "pcf-ers-demo/mvnw"
   args: ["-f", "pcf-ers-demo/pom.xml", "package"]
-
-run:
-  path: "cp"
-  args: ["-R","pcf-ers-demo/target", "output/target"]
 
 params:
   MAVEN_BASEDIR: pcf-ers-demo
