@@ -8,9 +8,11 @@ image_resource:
 
 inputs:
   - name: pcf-ers-demo
-    path: .
+    path: ./pcf-ers-demo
 
 run:
-  path: "./mvnw"
-  args: ["-f", "./pom.xml", "package"]
+  path: "pcf-ers-demo/mvnw"
+  args: ["-f", "pcf-ers-demo/pom.xml", "package"]
 
+params:
+  MAVEN_BASEDIR: pcf-ers-demo
