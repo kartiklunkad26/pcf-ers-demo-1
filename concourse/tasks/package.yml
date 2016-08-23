@@ -11,7 +11,7 @@ inputs:
 
 outputs:
   - name: jar-file
-    path: pcf-ers-demo/target/
+    path: output/target/
 
 run:
   path: "pcf-ers-demo/mvnw"
