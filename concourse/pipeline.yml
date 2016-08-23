@@ -25,6 +25,5 @@ jobs:
     - put: stage-pcf-ers-demo
       params:
         manifest: pcf-ers-demo/manifest.yml
-        path: pcf-ers-demo/target/pcf-ers-demo-0.0.1-SNAPSHOT.jar
 
 
