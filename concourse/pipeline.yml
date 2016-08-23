@@ -5,11 +5,24 @@ resources:
       uri: https://github.com/jwilliams-pivotal/pcf-ers-demo.git
       branch: master
 
+  - name: resource-deploy-web-app
+    type: cf
+    source:
+      api: https://api.local.pcfdev.io
+      username: admin
+      password: admin
+      organization: pcfdev-org
+      space: pcfdev-space
+      skip_cert_check: true
+
 jobs:
-  - name: package
+  - name: package-deploy
     plan:
     - get: source-code
       trigger: true
     - task: package
       privileged: true
       file: source-code/concourse/tasks/package.yml
+    - put: resource-deploy-web-app
+      params:
+        manifest: source-code/manifest.yml
