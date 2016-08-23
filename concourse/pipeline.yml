@@ -5,7 +5,7 @@ resources:
       uri: https://github.com/jwilliams-pivotal/pcf-ers-demo.git
       branch: master
 
-  - name: pcf-settings
+  - name: stage-pcf-ers-demo
     type: cf
     source:
       api: https://api.local2.pcfdev.io
@@ -16,22 +16,14 @@ resources:
       skip_cert_check: true
 
 jobs:
-  - name: package
+  - name: test-pcf-ers-demo
     plan:
     - get: pcf-ers-demo
       trigger: true
     - task: package
       privileged: true
       file: pcf-ers-demo/concourse/tasks/package.yml
-    params:
-      cache: true
-
-  - name: deploy
-    plan:
-    - get: pcf-ers-demo
-      trigger: true
-      passed: [package]
-    - put: pcf-settings
+    - put: stage-pcf-ers-demo
       params:
         manifest: pcf-ers-demo/manifest.yml
         path: pcf-ers-demo/target/pcf-ers-demo-0.0.1-SNAPSHOT.jar

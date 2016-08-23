@@ -9,6 +9,9 @@ image_resource:
 inputs:
   - name: pcf-ers-demo
 
+outputs:
+  - name: build-output
+
 run:
   path: "pcf-ers-demo/mvnw"
   args: ["-f", "pcf-ers-demo/pom.xml", "package"]
