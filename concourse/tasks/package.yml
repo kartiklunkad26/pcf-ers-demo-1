@@ -11,7 +11,7 @@ inputs:
 
 outputs:
   - name: build-output
-  - path: pcf-ers-demo/target
+  - path: build-output/target
 
 run:
   path: "pcf-ers-demo/mvnw"
