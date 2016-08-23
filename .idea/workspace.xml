@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8591b4a8-cb36-42d5-8f13-f9c14175fef3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/pipeline.yml" afterPath="$PROJECT_DIR$/concourse/pipeline.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/tasks/package.yml" afterPath="$PROJECT_DIR$/concourse/tasks/package.yml" />
     </list>
     <ignored path="pcf-ers-demo.iws" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="pipeline.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.758988">
+            <state vertical-scroll-proportion="0.80958724">
               <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
               <folding />
             </state>
@@ -69,8 +68,8 @@
       <file leaf-file-name="package.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/concourse/tasks/package.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.3333335">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state vertical-scroll-proportion="-11.259259">
+              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -646,12 +645,12 @@
       <created>1471953410568</created>
       <option name="number" value="Default" />
       <updated>1471953410568</updated>
-      <workItem from="1471953413860" duration="11522000" />
+      <workItem from="1471953413860" duration="11647000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11522000" />
+    <option name="totallyTimeSpent" value="11647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="676" y="87" width="1210" height="898" extended-state="0" />
@@ -756,15 +755,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/concourse/tasks/package.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.3333335">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state vertical-scroll-proportion="-11.259259">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.758988">
+        <state vertical-scroll-proportion="0.80958724">
           <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
           <folding />
         </state>
