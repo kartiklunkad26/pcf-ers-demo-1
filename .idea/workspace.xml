@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8591b4a8-cb36-42d5-8f13-f9c14175fef3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/pipeline.yml" afterPath="$PROJECT_DIR$/concourse/pipeline.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/tasks/package.yml" afterPath="$PROJECT_DIR$/concourse/tasks/package.yml" />
     </list>
     <ignored path="pcf-ers-demo.iws" />
@@ -71,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/concourse/tasks/package.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.505992">
-              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -117,7 +115,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="363" />
+    <option name="x" value="461" />
     <option name="y" value="23" />
     <option name="width" value="1210" />
     <option name="height" value="898" />
@@ -647,15 +645,15 @@
       <created>1471953410568</created>
       <option name="number" value="Default" />
       <updated>1471953410568</updated>
-      <workItem from="1471953413860" duration="9355000" />
+      <workItem from="1471953413860" duration="9519000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9355000" />
+    <option name="totallyTimeSpent" value="9519000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="363" y="23" width="1210" height="898" extended-state="0" />
+    <frame x="461" y="23" width="1210" height="898" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -766,7 +764,7 @@
     <entry file="file://$PROJECT_DIR$/concourse/tasks/package.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.505992">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding />
         </state>
       </provider>

@@ -18,7 +18,7 @@ run:
 
 run:
   path: "cp"
-  args: ["-R","./target", "output/target"]
+  args: ["-R","pcf-ers-demo/target", "output/target"]
 
 params:
   MAVEN_BASEDIR: pcf-ers-demo
