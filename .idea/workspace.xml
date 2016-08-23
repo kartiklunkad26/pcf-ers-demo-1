@@ -4,8 +4,6 @@
     <list default="true" id="8591b4a8-cb36-42d5-8f13-f9c14175fef3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/pipeline.yml" afterPath="$PROJECT_DIR$/concourse/pipeline.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/tasks/package.yml" afterPath="$PROJECT_DIR$/concourse/tasks/package.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.yml" afterPath="$PROJECT_DIR$/manifest.yml" />
     </list>
     <ignored path="pcf-ers-demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pipeline.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pipeline.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.11111">
+            <state vertical-scroll-proportion="0.7713126">
               <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
@@ -58,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manifest.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manifest.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manifest.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09921671">
-              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -100,8 +98,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/concourse/tasks/package.yml" />
-        <option value="$PROJECT_DIR$/concourse/pipeline.yml" />
         <option value="$PROJECT_DIR$/manifest.yml" />
+        <option value="$PROJECT_DIR$/concourse/pipeline.yml" />
       </list>
     </option>
   </component>
@@ -648,12 +646,12 @@
       <created>1471953410568</created>
       <option name="number" value="Default" />
       <updated>1471953410568</updated>
-      <workItem from="1471953413860" duration="14006000" />
+      <workItem from="1471953413860" duration="14278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14006000" />
+    <option name="totallyTimeSpent" value="14278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="723" y="23" width="1280" height="886" extended-state="0" />
@@ -756,18 +754,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
+    <entry file="file://$PROJECT_DIR$/manifest.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.11111">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.yml">
+    <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09921671">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.7713126">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>

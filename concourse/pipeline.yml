@@ -16,12 +16,11 @@ resources:
       skip_cert_check: true
 
 jobs:
-  - name: test-pcf-ers-demo
+  - name: pcf-ers-demo
     plan:
     - get: pcf-ers-demo
       trigger: true
     - task: package
-      privileged: true
       file: pcf-ers-demo/concourse/tasks/package.yml
     - put: stage-pcf-ers-demo
       params:
