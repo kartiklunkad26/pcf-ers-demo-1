@@ -1,0 +1,8 @@
+/Users/williamsj/git/pcf-ers-demo/src/main/java/io/pivotal/pcf/sme/ers/DummyDataCLR.java
+/Users/williamsj/git/pcf-ers-demo/src/main/java/io/pivotal/pcf/sme/ers/client/ui/controller/AttendeeService.java
+/Users/williamsj/git/pcf-ers-demo/src/main/java/io/pivotal/pcf/sme/ers/PcfErsDemo1Application.java
+/Users/williamsj/git/pcf-ers-demo/src/main/java/io/pivotal/pcf/sme/ers/server/model/Attendee.java
+/Users/williamsj/git/pcf-ers-demo/src/main/java/io/pivotal/pcf/sme/ers/client/model/Attendee.java
+/Users/williamsj/git/pcf-ers-demo/src/main/java/io/pivotal/pcf/sme/ers/client/model/PagedAttendees.java
+/Users/williamsj/git/pcf-ers-demo/src/main/java/io/pivotal/pcf/sme/ers/server/repo/AttendeeRepository.java
+/Users/williamsj/git/pcf-ers-demo/src/main/java/io/pivotal/pcf/sme/ers/client/ui/controller/AttendeeController.java
