@@ -11,3 +11,6 @@ cp source-code/concourse/scripts/* ./output
 
 echo "copying cf manifest file to output directory"
 cp source-code/manifest.yml ./output
+
+echo "set script permissions"
+chmod 755 ./output/*
