@@ -7,14 +7,10 @@ image_resource:
     tag: latest
 
 inputs:
-  - name: source-code
+  - name: pcf-ers-demo
 
 outputs:
   - name: output
 
 run:
-  path: "source-code/mvnw"
-  args: ["-f", "source-code/pom.xml", "package"]
-
-params:
-  MAVEN_BASEDIR: source-code
+  path: "source-code/concourse/scripts/package.sh"

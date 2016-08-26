@@ -10,4 +10,4 @@ inputs:
   - name: output
 
 run:
-  path: "./zero-downtime-push.sh"
+  path: "output/zero-downtime-push.sh"
