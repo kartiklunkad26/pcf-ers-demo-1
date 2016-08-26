@@ -7,14 +7,8 @@ image_resource:
     tag: latest
 
 inputs:
-  - name: source-code
-
-outputs:
   - name: output
 
 run:
-  path: "source-code/mvnw"
-  args: ["-f", "source-code/pom.xml", "package"]
-
-params:
-  MAVEN_BASEDIR: source-code
+  path: "cf"
+  args: ["zero-downtime-push", "attendees-citi", "-f", "output/manifest.yml"]

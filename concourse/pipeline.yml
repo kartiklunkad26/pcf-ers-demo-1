@@ -1,15 +1,9 @@
 resources:
-  - name: gh-release-1.x
-    type: github-release
+  - name: source-code
+    type: git
     source:
-      user: jwilliams-pivotal
-      repository: pcf-ers-demo
-
-  - name: gh-release-2.x
-    type: github-release
-    source:
-      user: jwilliams-pivotal
-      repository: pcf-ers-demo
+      uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
+      branch: master
 
   - name: stage-pcf
     type: cf
@@ -22,24 +16,20 @@ resources:
       skip_cert_check: true
 
 jobs:
-  - name: deploy-1.x
+  - name: deploy
     plan:
-    - get: gh-release-1.x
-      version:
-        in:
-        tag: v1.0.0
+    - get: source-code
+    - task: package
+      file: source-code/concourse/tasks/package.yml
     - put: stage-pcf
       params:
-        manifest: gh-release-1.x/manifest.yml
-        path: gh-release-1.x/pcf-ers-demo.jar
+        manifest: source-code/manifest.yml
+        path: output/pcf-ers-demo.jar
 
-  - name: deploy-2.x
+  - name: zero-downtime-deploy
     plan:
-    - get: gh-release-2.x
-      version:
-        in:
-        tag: v2.0.0
-    - put: stage-pcf
-      params:
-        manifest: gh-release-2.x/manifest.yml
-        path: gh-release-2.x/pcf-ers-demo.jar
+    - get: source-code
+    - task: package
+      file: source-code/concourse/tasks/package.yml
+    - task: zero-downtime-deploy
+      file: source-code/concourse/tasks/zero-downtime-push.yml
