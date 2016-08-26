@@ -14,3 +14,6 @@ outputs:
 
 run:
   path: "source-code/concourse/scripts/package.sh"
+
+params:
+  MAVEN_BASEDIR: source-code
