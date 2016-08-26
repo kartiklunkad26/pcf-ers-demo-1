@@ -1,16 +1,16 @@
 #!/bin/sh
 
 echo "building jar binary"
-source-code/mvnw -f source-code/pom.xml package -DskipTests
+pcf-ers-demo/mvnw -f source-code/pom.xml package -DskipTests
 
 echo "copying jar binary to output directory"
-cp source-code/target/*.jar ./output
+cp pcf-ers-demo/target/*.jar ./output
 
 echo "copying concourse scripts to output directory"
-cp source-code/concourse/scripts/* ./output
+cp pcf-ers-demo/concourse/scripts/* ./output
 
 echo "copying cf manifest file to output directory"
-cp source-code/manifest.yml ./output
+cp pcf-ers-demo/manifest.yml ./output
 
 echo "set script permissions"
 chmod 755 ./output/*

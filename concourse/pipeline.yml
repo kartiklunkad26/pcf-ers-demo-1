@@ -1,35 +1,32 @@
 resources:
-  - name: source-code
+  - name: pcf-ers-demo
     type: git
     source:
       uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
       branch: master
 
-  - name: stage-pcf
-    type: cf
-    source:
-      api: https://api.local2.pcfdev.io
-      username: admin
-      password: admin
-      organization: pcfdev-org
-      space: pcfdev-space
-      skip_cert_check: true
-
 jobs:
-  - name: deploy
+  - name: test
     plan:
-    - get: source-code
+    - get: pcf-ers-demo
+      trigger: true
+    - task: test
+      file: pcf-ers-demo/concourse/tasks/test.yml
+
+  - name: package
+    plan:
+    - get: pcf-ers-demo
+      trigger: true
+      passed: [test]
     - task: package
-      file: source-code/concourse/tasks/package.yml
-    - put: stage-pcf
-      params:
-        manifest: source-code/manifest.yml
-        path: output/pcf-ers-demo.jar
+      file: pcf-ers-demo/concourse/tasks/package.yml
 
   - name: zero-downtime-deploy
     plan:
-    - get: source-code
+    - get: pcf-ers-demo
+      trigger: true
+      passed: [package]
     - task: package
-      file: source-code/concourse/tasks/package.yml
+      file: pcf-ers-demo/concourse/tasks/package.yml
     - task: zero-downtime-deploy
-      file: source-code/concourse/tasks/zero-downtime-push.yml
+      file: pcf-ers-demo/concourse/tasks/zero-downtime-push.yml
