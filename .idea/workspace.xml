@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8591b4a8-cb36-42d5-8f13-f9c14175fef3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/scripts/package.sh" afterPath="$PROJECT_DIR$/concourse/scripts/package.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/scripts/zero-downtime-push.sh" afterPath="$PROJECT_DIR$/concourse/scripts/zero-downtime-push.sh" />
     </list>
     <ignored path="pcf-ers-demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -75,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zero-downtime-push.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="zero-downtime-push.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/concourse/scripts/zero-downtime-push.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0652921">
+              <caret line="3" column="72" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -105,10 +105,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/concourse/scripts/package.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32646048">
+            <state vertical-scroll-proportion="0.0">
               <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
               <folding />
             </state>
@@ -152,12 +152,12 @@
         <option value="$PROJECT_DIR$/concourse/tasks/zero-downtime-push.sh" />
         <option value="$PROJECT_DIR$/concourse/tasks/package.sh" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/concourse/scripts/zero-downtime-push.sh" />
         <option value="$PROJECT_DIR$/concourse/tasks/zero-downtime-push.yml" />
         <option value="$PROJECT_DIR$/concourse/pipeline.yml" />
         <option value="$PROJECT_DIR$/docker/Dockerfile" />
         <option value="$PROJECT_DIR$/concourse/tasks/package.yml" />
         <option value="$PROJECT_DIR$/concourse/scripts/package.sh" />
+        <option value="$PROJECT_DIR$/concourse/scripts/zero-downtime-push.sh" />
       </list>
     </option>
   </component>
@@ -767,12 +767,12 @@
       <updated>1471953410568</updated>
       <workItem from="1471953413860" duration="26770000" />
       <workItem from="1472025649969" duration="37000" />
-      <workItem from="1472129348490" duration="22363000" />
+      <workItem from="1472129348490" duration="22666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49170000" />
+    <option name="totallyTimeSpent" value="49473000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1592" height="993" extended-state="0" />
@@ -990,26 +990,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jenkins-script.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concourse/scripts/zero-downtime-push.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -1038,6 +1022,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/concourse/scripts/package.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/concourse/tasks/zero-downtime-push.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1046,10 +1046,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concourse/scripts/package.sh">
+    <entry file="file://$PROJECT_DIR$/concourse/scripts/zero-downtime-push.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32646048">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0652921">
+          <caret line="3" column="72" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
           <folding />
         </state>
       </provider>
