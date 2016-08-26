@@ -1,0 +1,20 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: williamsjt/cloudfoundry
+    tag: latest
+
+inputs:
+  - name: pcf-ers-demo-a
+  - name: pcf-ers-demo-b
+
+outputs:
+  - name: output
+
+run:
+  path: "pcf-ers-demo/concourse/scripts/package-ab.sh"
+
+params:
+  MAVEN_BASEDIR: pcf-ers-demo

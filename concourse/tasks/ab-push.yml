@@ -1,0 +1,13 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: williamsjt/cloudfoundry
+    tag: latest
+
+inputs:
+  - name: output
+
+run:
+  path: "output/ab-push.sh"
