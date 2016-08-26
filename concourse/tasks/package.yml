@@ -7,7 +7,7 @@ image_resource:
     tag: latest
 
 inputs:
-  - name: pcf-ers-demo
+  - name: source-code
 
 outputs:
   - name: output
