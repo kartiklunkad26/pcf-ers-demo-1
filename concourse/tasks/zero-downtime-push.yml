@@ -10,5 +10,4 @@ inputs:
   - name: output
 
 run:
-  path: "cf"
-  args: ["zero-downtime-push", "attendees-citi", "-f", "output/manifest.yml"]
+  path: "./zero-downtime-push.sh"

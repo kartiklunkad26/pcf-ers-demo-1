@@ -1,0 +1,5 @@
+#build docker image
+docker build -t "williamsjt/cloudfoundry" .
+
+#push docker image
+docker push williamsjt/cloudfoundry
