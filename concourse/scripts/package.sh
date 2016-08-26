@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "building jar binary"
-source-code/mvnw -f pom.xml package -DskipTests
+source-code/mvnw -f source-code/pom.xml package -DskipTests
 
 echo "copying jar binary to output directory"
 cp source-code/target/*.jar ./output
