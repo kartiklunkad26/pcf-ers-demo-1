@@ -79,7 +79,7 @@ public class AttendeeService {
 	@RequestMapping("/go")
 	public String[] go() throws Exception {
 
-		String appVersion = "4.0";
+		String appVersion = "A";
 		
 		List<String> values = new ArrayList<String>();
 		values.add((String) getVcapApplicationMap().getOrDefault("application_name", "no name environment variable"));
