@@ -53,6 +53,7 @@ jobs:
 
   - name: deploy-ab
     plan:
+    - get: pcf-ers-demo
     - get: pcf-ers-demo-a
       trigger: true
       passed: [package-ab]
@@ -60,4 +61,4 @@ jobs:
       trigger: true
       passed: [package-ab]
     - task: deploy-ab
-      file: pcf-ers-demo-a/concourse/tasks/package.yml
+      file: pcf-ers-demo/concourse/tasks/package-ab.yml

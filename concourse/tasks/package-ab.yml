@@ -9,6 +9,7 @@ image_resource:
 inputs:
   - name: pcf-ers-demo-a
   - name: pcf-ers-demo-b
+  - name: pcf-ers-demo
 
 outputs:
   - name: output
