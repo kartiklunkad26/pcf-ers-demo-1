@@ -33,6 +33,30 @@ jobs:
     - task: package
       file: pcf-ers-demo/concourse/tasks/package.yml
 
+  - name: package-ab
+    plan:
+    - aggregate:
+      - get: pcf-ers-demo
+        passed: [test]
+        trigger: true
+      - get: pcf-ers-demo-a
+      - get: pcf-ers-demo-b
+    - task: package-ab
+      file: pcf-ers-demo/concourse/tasks/package-ab.yml
+
+  - name: deploy-ab
+    plan:
+    - aggregate:
+      - get: pcf-ers-demo
+        passed: [package-ab]
+        trigger: true
+      - get: pcf-ers-demo-a
+      - get: pcf-ers-demo-b
+    - task: package-ab
+      file: pcf-ers-demo/concourse/tasks/package-ab.yml
+    - task: deploy-ab
+      file: pcf-ers-demo/concourse/tasks/ab-push.yml
+
   - name: zero-downtime-deploy
     plan:
     - get: pcf-ers-demo
@@ -42,23 +66,3 @@ jobs:
       file: pcf-ers-demo/concourse/tasks/package.yml
     - task: zero-downtime-deploy
       file: pcf-ers-demo/concourse/tasks/zero-downtime-push.yml
-
-  - name: package-ab
-    plan:
-    - aggregate:
-      - get: pcf-ers-demo-a
-      - get: pcf-ers-demo-b
-    - task: package-ab
-      file: pcf-ers-demo/concourse/tasks/package-ab.yml
-
-  - name: deploy-ab
-    plan:
-    - get: pcf-ers-demo
-    - get: pcf-ers-demo-a
-      trigger: true
-      passed: [package-ab]
-    - get: pcf-ers-demo-b
-      trigger: true
-      passed: [package-ab]
-    - task: deploy-ab
-      file: pcf-ers-demo/concourse/tasks/ab-push.yml
