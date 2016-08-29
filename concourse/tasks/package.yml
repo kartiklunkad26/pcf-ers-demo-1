@@ -19,9 +19,7 @@ run:
   - |
     pcf-ers-demo/mvnw -f pcf-ers-demo/pom.xml package -DskipTests
     cp pcf-ers-demo/target/*.jar ../output
-    cp pcf-ers-demo/concourse/scripts/* ../output
-    cp pcf-ers-demo/manifest.yml ../output 
-    chmod 755 ../output/*
+    cp pcf-ers-demo/manifest.yml ../output
 
 params:
   MAVEN_BASEDIR: pcf-ers-demo
