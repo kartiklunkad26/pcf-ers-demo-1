@@ -5,17 +5,11 @@ resources:
       uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
       branch: master
 
-  - name: pcf-ers-demo-a
+  - name: pcf-ers-demo-releases
     type: git
     source:
       uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
-      branch: A
-
-  - name: pcf-ers-demo-b
-    type: git
-    source:
-      uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
-      branch: B
+      branch: releases
 
 jobs:
   - name: test
@@ -33,30 +27,6 @@ jobs:
     - task: package
       file: pcf-ers-demo/concourse/tasks/package.yml
 
-  - name: package-ab
-    plan:
-    - aggregate:
-      - get: pcf-ers-demo
-        passed: [test]
-        trigger: true
-      - get: pcf-ers-demo-a
-      - get: pcf-ers-demo-b
-    - task: package-ab
-      file: pcf-ers-demo/concourse/tasks/package-ab.yml
-
-  - name: deploy-ab
-    plan:
-    - aggregate:
-      - get: pcf-ers-demo
-        passed: [package-ab]
-        trigger: true
-      - get: pcf-ers-demo-a
-      - get: pcf-ers-demo-b
-    - task: package-ab
-      file: pcf-ers-demo/concourse/tasks/package-ab.yml
-    - task: deploy-ab
-      file: pcf-ers-demo/concourse/tasks/ab-push.yml
-
   - name: zero-downtime-deploy
     plan:
     - get: pcf-ers-demo
@@ -66,3 +36,12 @@ jobs:
       file: pcf-ers-demo/concourse/tasks/package.yml
     - task: zero-downtime-deploy
       file: pcf-ers-demo/concourse/tasks/zero-downtime-push.yml
+
+  - name: deploy-ab
+    plan:
+    - aggregate:
+      - get: pcf-ers-demo-releases
+    - task: deploy-ab
+      file: pcf-ers-demo-releases/concourse/tasks/ab-push.yml
+
+
