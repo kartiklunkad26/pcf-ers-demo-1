@@ -9,17 +9,12 @@ image_resource:
 inputs:
   - name: pcf-ers-demo
 
-outputs:
-  - name: output
-
 run:
   path: sh
   args:
   - -exc
   - |
     pcf-ers-demo/mvnw -f pcf-ers-demo/pom.xml package
-    cp pcf-ers-demo/target/*.jar ./output
-    cp pcf-ers-demo/manifest.yml ./output
 
 params:
   MAVEN_BASEDIR: pcf-ers-demo
