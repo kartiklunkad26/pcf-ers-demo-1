@@ -6,10 +6,10 @@ resources:
       branch: master
 
   - name: pcf-ers-demo-releases
-    type: git
+    type: github-release
     source:
-      uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
-      branch: releases
+      user: jwilliams-pivotal
+      repository: pcf-ers-demo
 
 jobs:
   - name: test
@@ -40,8 +40,12 @@ jobs:
   - name: deploy-ab
     plan:
     - aggregate:
+      - get: pcf-ers-demo
       - get: pcf-ers-demo-releases
+        version:
+          in:
+          tag: v1.0.0-AB
     - task: deploy-ab
-      file: pcf-ers-demo-releases/concourse/tasks/ab-push.yml
+      file: pcf-ers-demo/concourse/tasks/ab-push.yml
 
 

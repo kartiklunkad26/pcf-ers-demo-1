@@ -10,4 +10,9 @@ inputs:
   - name: output
 
 run:
-  path: "output/zero-downtime-push.sh"
+  path: sh
+  args:
+  - -exc
+  - |
+    cf login -a https://api.local2.pcfdev.io --skip-ssl-validation -u admin -p admin -o pcfdev-org -s pcfdev-space
+    cf zero-downtime-push attendees -f output/manifest.yml -p output/pcf-ers-demo.jar
