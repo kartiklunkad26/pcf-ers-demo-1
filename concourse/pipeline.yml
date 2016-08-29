@@ -24,9 +24,6 @@ jobs:
       trigger: true
     - task: test
       file: pcf-ers-demo/concourse/tasks/test.yml
-    - put: pcf-ers-demo
-      params:
-        repository: output
 
   - name: zero-downtime-deploy
     plan:
