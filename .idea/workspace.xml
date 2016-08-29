@@ -40,7 +40,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-              <folding />
+              <folding>
+                <marker date="1472483411000" expanded="true" signature="204:273" placeholder="source:" />
+                <marker date="1472483411000" expanded="true" signature="900:1027" placeholder="aggregate:" />
+                <marker date="1472483411000" expanded="true" signature="980:1027" placeholder="version:" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,7 +54,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-14.074074">
               <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
-              <folding />
+              <folding>
+                <marker date="1472487036000" expanded="true" signature="17:120" placeholder="image_resource:" />
+                <marker date="1472487036000" expanded="true" signature="56:120" placeholder="source:" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/concourse/tasks/zero-downtime-push.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -69,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/concourse/tasks/package.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5175097">
-              <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -836,12 +843,12 @@
       <workItem from="1471953413860" duration="26770000" />
       <workItem from="1472025649969" duration="37000" />
       <workItem from="1472129348490" duration="28637000" />
-      <workItem from="1472256389864" duration="6526000" />
+      <workItem from="1472256389864" duration="7786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61970000" />
+    <option name="totallyTimeSpent" value="63230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="191" y="23" width="1606" height="891" extended-state="0" />
@@ -896,7 +903,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-          <folding />
+          <folding>
+            <marker date="1472483411000" expanded="true" signature="204:273" placeholder="source:" />
+            <marker date="1472483411000" expanded="true" signature="900:1027" placeholder="aggregate:" />
+            <marker date="1472483411000" expanded="true" signature="980:1027" placeholder="version:" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -920,7 +931,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
+          <folding>
+            <marker date="1472487036000" expanded="true" signature="17:120" placeholder="image_resource:" />
+            <marker date="1472487036000" expanded="true" signature="56:120" placeholder="source:" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -944,7 +958,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
+          <folding>
+            <marker date="1472483411000" expanded="true" signature="204:273" placeholder="source:" />
+            <marker date="1472483411000" expanded="true" signature="900:1027" placeholder="aggregate:" />
+            <marker date="1472483411000" expanded="true" signature="980:1027" placeholder="version:" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1112,6 +1130,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <marker date="1472483411000" expanded="true" signature="204:273" placeholder="source:" />
+            <marker date="1472483411000" expanded="true" signature="900:1027" placeholder="aggregate:" />
+            <marker date="1472483411000" expanded="true" signature="980:1027" placeholder="version:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/concourse/tasks/test.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1120,26 +1150,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/concourse/tasks/ab-push.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.074074">
           <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
-          <folding />
+          <folding>
+            <marker date="1472487036000" expanded="true" signature="17:120" placeholder="image_resource:" />
+            <marker date="1472487036000" expanded="true" signature="56:120" placeholder="source:" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/concourse/tasks/zero-downtime-push.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1147,7 +1172,7 @@
     <entry file="file://$PROJECT_DIR$/concourse/tasks/package.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5175097">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
           <folding />
         </state>
       </provider>
