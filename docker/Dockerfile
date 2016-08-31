@@ -7,4 +7,8 @@ RUN dpkg -i cf-cli.deb
 RUN chmod 755 cf-autopilot
 RUN cf install-plugin -f cf-autopilot
 
+RUN git clone https://github.com/jwilliams-pivotal/pcf-ers-demo.git
+RUN cd ./pcf-ers-demo && ./mvnw -f ./pom.xml package -DskipTests=true
+RUN rm -rf ./pcf-ers-demo
+
 WORKDIR /data
