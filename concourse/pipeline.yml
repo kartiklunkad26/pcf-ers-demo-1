@@ -27,10 +27,9 @@ jobs:
 
   - name: zero-downtime-deploy
     plan:
-    - aggregate:
-      - get: pcf-ers-demo
-        trigger: true
-        passed: [test]
+    - get: pcf-ers-demo
+      trigger: true
+      passed: [test]
     - task: zero-downtime-deploy
       file: pcf-ers-demo/concourse/tasks/zero-downtime-push.yml
 
