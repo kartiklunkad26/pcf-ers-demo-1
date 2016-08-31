@@ -43,5 +43,3 @@ jobs:
           tag: v1.0.0-AB
     - task: deploy-ab
       file: deployment-scripts/concourse/tasks/ab-push.yml
-
-
