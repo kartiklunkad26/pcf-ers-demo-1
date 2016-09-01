@@ -18,7 +18,7 @@ resources:
       repository: pcf-ers-demo
 
 jobs:
-  - name: tests
+  - name: test
     plan:
     - get: pcf-ers-demo
       trigger: true
@@ -31,6 +31,7 @@ jobs:
       trigger: true
       passed: [test]
     - task: zero-downtime-deploy
+      privileged: true
       file: pcf-ers-demo/concourse/tasks/zero-downtime-push.yml
 
   - name: deploy-A-and-B
