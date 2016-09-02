@@ -14,7 +14,7 @@ run:
   args:
   - -exc
   - |
-    pcf-ers-demo-canary/mvnw -f pcf-ers-demo/pom.xml package -DskipTests=true
+    pcf-ers-demo-canary/mvnw -f pcf-ers-demo-canary/pom.xml package -DskipTests=true
     cf login -a {{PCF_TARGET_URL}} --skip-ssl-validation -u {{PCF_USERNAME}} -p {{PCF_PASSWORD}} -o {{PCF_ORG}} -s {{PCF_SPACE}}
     cf push attendees-canary -f pcf-ers-demo-canary/manifest.yml -p pcf-ers-demo-canary/target/pcf-ers-demo.jar
 

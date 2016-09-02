@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8591b4a8-cb36-42d5-8f13-f9c14175fef3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/concourse/tasks/canary-test.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/pipeline.yml" afterPath="$PROJECT_DIR$/concourse/pipeline.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/tasks/canary-push.yml" afterPath="$PROJECT_DIR$/concourse/tasks/canary-push.yml" />
     </list>
     <ignored path="pcf-ers-demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pipeline.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pipeline.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37798408">
-              <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -86,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canary-push.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="canary-push.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-push.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.403183">
+              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -166,10 +165,10 @@
         <option value="$PROJECT_DIR$/concourse/tasks/ab-push.yml" />
         <option value="$PROJECT_DIR$/concourse/tasks/canary-rollback.yml" />
         <option value="$PROJECT_DIR$/concourse/tasks/canary-scale.yml" />
-        <option value="$PROJECT_DIR$/concourse/tasks/canary-push.yml" />
         <option value="$PROJECT_DIR$/concourse/tasks/uattest.yml" />
         <option value="$PROJECT_DIR$/concourse/pipeline.yml" />
         <option value="$PROJECT_DIR$/concourse/tasks/canary-test.yml" />
+        <option value="$PROJECT_DIR$/concourse/tasks/canary-push.yml" />
       </list>
     </option>
   </component>
@@ -186,8 +185,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="283" />
-    <option name="y" value="47" />
+    <option name="x" value="337" />
+    <option name="y" value="41" />
     <option name="width" value="1660" />
     <option name="height" value="874" />
   </component>
@@ -771,15 +770,15 @@
       <workItem from="1472129348490" duration="28637000" />
       <workItem from="1472256389864" duration="20414000" />
       <workItem from="1472700593257" duration="1056000" />
-      <workItem from="1472840628711" duration="4370000" />
+      <workItem from="1472840628711" duration="4571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81284000" />
+    <option name="totallyTimeSpent" value="81485000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="283" y="47" width="1660" height="874" extended-state="6" />
+    <frame x="337" y="41" width="1660" height="874" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1152,14 +1151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-push.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-rollback.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1208,6 +1199,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-test.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1216,10 +1215,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
+    <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-push.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37798408">
-          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.403183">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
           <folding />
         </state>
       </provider>
