@@ -11,7 +11,7 @@ run:
   args:
   - -exc
   - |
-    cf login -a {{PCF_TARGET_URL}} --skip-ssl-validation -u {{PCF_USERNAME}} -p {{PCF_PASSWORD}} -o {{PCF_ORG}} -s {{PCF_SPACE}}
+    cf login -a $PCF_TARGET_URL --skip-ssl-validation -u $PCF_USERNAME -p $PCF_PASSWORD -o $PCF_ORG -s $PCF_SPACE
     cf map-route attendees-canary local.pcfdev.io --hostname attendees
     cf scale attendees-canary -i 3
     cf unmap-route attendees local2.pcfdev.io --hostname attendees
