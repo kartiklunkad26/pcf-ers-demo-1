@@ -5,6 +5,12 @@ resources:
       uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
       branch: master
 
+  - name: pcf-ers-demo-canary
+    type: git
+    source:
+      uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
+      branch: master
+
   - name: deployment-scripts
     type: git
     source:
@@ -47,29 +53,29 @@ jobs:
 
   - name: unittest-canary
     plan:
-    - get: pcf-ers-demo
+    - get: pcf-ers-demo-canary
     - task: unittest-canary
       file: pcf-ers-demo/concourse/tasks/test.yml
 
   - name: deploy-canary
     plan:
-    - get: pcf-ers-demo
+    - get: pcf-ers-demo-canary
       trigger: true
       passed: [unittest-canary]
     - task: canary-deploy
       privileged: true
-      file: pcf-ers-demo/concourse/tasks/canary-push.yml
+      file: pcf-ers-demo-canary/concourse/tasks/canary-push.yml
 
   - name: uat-canary
     plan:
-    - get: pcf-ers-demo
+    - get: pcf-ers-demo-canary
       trigger: true
       passed: [deploy-canary]
     - task: uattest-canary
-      file: pcf-ers-demo/concourse/tasks/uattest.yml
+      file: pcf-ers-demo-canary/concourse/tasks/uattest.yml
       on_success:
         task: scale-canary
-        file: pcf-ers-demo/concourse/tasks/canary-scale.yml
+        file: pcf-ers-demo-canary/concourse/tasks/canary-scale.yml
       on_failure:
         task: canary-rollback
-        file: pcf-ers-demo/concourse/tasks/canary-rollback.yml
+        file: pcf-ers-demo-canary/concourse/tasks/canary-rollback.yml

@@ -14,7 +14,7 @@ run:
   args:
   - -exc
   - |
-    test_url=http://attendees-citi-canary.pcfdev.io/basics
+    test_url=http://attendees-canary.pcfdev.io/basics
     urlstatus=$(curl -o /dev/null --silent --head --write-out '%{http_code}' ${test_url})
     code=404
     if [ $urlstatus = $code ]

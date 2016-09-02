@@ -7,16 +7,16 @@ image_resource:
     tag: latest
 
 inputs:
-  - name: pcf-ers-demo
+  - name: pcf-ers-demo-canary
 
 run:
   path: sh
   args:
   - -exc
   - |
-    pcf-ers-demo/mvnw -f pcf-ers-demo/pom.xml package -DskipTests=true
+    pcf-ers-demo-canary/mvnw -f pcf-ers-demo/pom.xml package -DskipTests=true
     cf login -a {{PCF_TARGET_URL}} --skip-ssl-validation -u {{PCF_USERNAME}} -p {{PCF_PASSWORD}} -o {{PCF_ORG}} -s {{PCF_SPACE}}
-    cf push attendees-canary -f pcf-ers-demo/manifest.yml -p pcf-ers-demo/target/pcf-ers-demo.jar
+    cf push attendees-canary -f pcf-ers-demo-canary/manifest.yml -p pcf-ers-demo-canary/target/pcf-ers-demo.jar
 
 params:
-  MAVEN_BASEDIR: pcf-ers-demo
+  MAVEN_BASEDIR: pcf-ers-demo-canary
