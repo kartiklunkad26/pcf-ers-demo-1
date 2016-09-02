@@ -55,7 +55,7 @@ jobs:
     plan:
     - get: pcf-ers-demo-canary
     - task: unittest-canary
-      file: pcf-ers-demo/concourse/tasks/test.yml
+      file: pcf-ers-demo-canary/concourse/tasks/canary-test.yml
 
   - name: deploy-canary
     plan:
