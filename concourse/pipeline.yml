@@ -44,3 +44,32 @@ jobs:
           tag: v1.0.0-AB
     - task: deploy-ab
       file: deployment-scripts/concourse/tasks/ab-push.yml
+
+  - name: unittest-canary
+    plan:
+    - get: pcf-ers-demo
+    - task: unittest-canary
+      file: pcf-ers-demo/concourse/tasks/test.yml
+
+  - name: deploy-canary
+    plan:
+    - get: pcf-ers-demo
+      trigger: true
+      passed: [unittest-canary]
+    - task: canary-deploy
+      privileged: true
+      file: pcf-ers-demo/concourse/tasks/canary-push.yml
+
+  - name: uat-canary
+    plan:
+    - get: pcf-ers-demo
+      trigger: true
+      passed: [deploy-canary]
+    - task: uattest-canary
+      file: pcf-ers-demo/concourse/tasks/uattest.yml
+      on_success:
+        task: scale-canary
+        file: pcf-ers-demo/concourse/tasks/canary-scale.yml
+      on_failure:
+        task: canary-rollback
+        file: pcf-ers-demo/concourse/tasks/canary-rollback.yml

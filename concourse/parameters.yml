@@ -1,0 +1,13 @@
+---
+# S3 settings
+S3_ACCESS_KEY: TVFYNKU2CEH3H46KSZW8
+S3_SECRET_KEY: wcfbCrDPIOxkoBKS/TJ9bqgkp64V//rN9X4vfSP+
+S3_REGION: us-east-1
+S3_ENDPOINT: http://192.168.1.44:9000
+
+# PCF settings
+PCF_TARGET_URL: https://api.local.pcfdev.io
+PCF_USERNAME: admin
+PCF_PASSWORD: admin
+PCF_ORG: pcfdev-org
+PCF_SPACE: pcfdev-space

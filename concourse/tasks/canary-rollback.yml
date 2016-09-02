@@ -6,17 +6,10 @@ image_resource:
     repository: williamsjt/cloudfoundry
     tag: latest
 
-inputs:
-  - name: pcf-ers-demo
-
 run:
   path: sh
   args:
   - -exc
   - |
-    pcf-ers-demo/mvnw -f pcf-ers-demo/pom.xml package -DskipTests=true
     cf login -a {{PCF_TARGET_URL}} --skip-ssl-validation -u {{PCF_USERNAME}} -p {{PCF_PASSWORD}} -o {{PCF_ORG}} -s {{PCF_SPACE}}
-    cf zero-downtime-push attendees -f pcf-ers-demo/manifest.yml -p pcf-ers-demo/target/pcf-ers-demo.jar
-
-params:
-  MAVEN_BASEDIR: pcf-ers-demo
+    cf delete attendees-canary
