@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8591b4a8-cb36-42d5-8f13-f9c14175fef3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/canary-pipeline.yml" afterPath="$PROJECT_DIR$/concourse/canary-pipeline.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/tasks/canary-rollback.yml" afterPath="$PROJECT_DIR$/concourse/tasks/canary-rollback.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/tasks/canary-scale.yml" afterPath="$PROJECT_DIR$/concourse/tasks/canary-scale.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/tasks/canary-uattest.yml" afterPath="$PROJECT_DIR$/concourse/tasks/canary-uattest.yml" />
     </list>
     <ignored path="pcf-ers-demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ab-push.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ab-push.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/concourse/tasks/ab-push.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4935065">
+            <state vertical-scroll-proportion="0.0">
               <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
               <folding />
             </state>
@@ -88,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canary-uattest.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="canary-uattest.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-uattest.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.3948052">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -112,7 +109,7 @@
         <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-rollback.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+              <caret line="14" column="33" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -172,12 +169,12 @@
         <option value="$PROJECT_DIR$/concourse/tasks/canary-push.yml" />
         <option value="$PROJECT_DIR$/concourse/parameters.yml" />
         <option value="$PROJECT_DIR$/concourse/tasks/ab-push.yml" />
-        <option value="$PROJECT_DIR$/concourse/tasks/canary-uattest.yml" />
         <option value="$PROJECT_DIR$/concourse/ab-pipeline.yml" />
         <option value="$PROJECT_DIR$/docker/commands.txt" />
         <option value="$PROJECT_DIR$/concourse/canary-pipeline.yml" />
         <option value="$PROJECT_DIR$/concourse/tasks/canary-rollback.yml" />
         <option value="$PROJECT_DIR$/concourse/tasks/canary-scale.yml" />
+        <option value="$PROJECT_DIR$/concourse/tasks/canary-uattest.yml" />
       </list>
     </option>
   </component>
@@ -194,7 +191,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="252" />
+    <option name="y" value="30" />
     <option name="width" value="1679" />
     <option name="height" value="890" />
   </component>
@@ -794,15 +792,15 @@
       <workItem from="1472700593257" duration="1056000" />
       <workItem from="1472840628711" duration="6944000" />
       <workItem from="1473119217549" duration="101000" />
-      <workItem from="1473119815477" duration="2588000" />
+      <workItem from="1473119815477" duration="2894000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86547000" />
+    <option name="totallyTimeSpent" value="86853000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1679" height="890" extended-state="6" />
+    <frame x="252" y="30" width="1679" height="890" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1226,22 +1224,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-uattest.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-rollback.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-push.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1252,8 +1234,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/concourse/tasks/ab-push.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4935065">
+        <state vertical-scroll-proportion="0.0">
           <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-rollback.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-uattest.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3948052">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
           <folding />
         </state>
       </provider>
