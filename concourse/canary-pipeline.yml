@@ -28,7 +28,7 @@ jobs:
       privileged: true
       file: pcf-ers-demo/concourse/tasks/canary-push.yml
 
-  - name: uat
+  - name: uat-then-roll
     plan:
     - get: pcf-ers-demo
       trigger: true

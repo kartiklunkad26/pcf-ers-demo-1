@@ -15,5 +15,5 @@ run:
     cf map-route attendees-canary $PCF_DOMAIN --hostname attendees
     cf scale attendees-canary -i 3
     cf unmap-route attendees $PCF_DOMAIN --hostname attendees
-    cf delete -f attendees
+    cf delete attendees -f
     cf rename attendees-canary attendees
