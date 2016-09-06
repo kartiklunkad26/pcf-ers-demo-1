@@ -55,6 +55,12 @@ jobs:
           in:
           tag: v1.0.0-AB
     - task: deploy-ab
+      params:
+        PCF_TARGET_URL: {{PCF_TARGET_URL}}
+        PCF_USERNAME: {{PCF_USERNAME}}
+        PCF_PASSWORD: {{PCF_PASSWORD}}
+        PCF_ORG: {{PCF_ORG}}
+        PCF_SPACE: {{PCF_SPACE}}
       file: deployment-scripts/concourse/tasks/ab-push.yml
 
   - name: unittest-canary
@@ -69,6 +75,12 @@ jobs:
       trigger: true
       passed: [unittest-canary]
     - task: canary-deploy
+      params:
+        PCF_TARGET_URL: {{PCF_TARGET_URL}}
+        PCF_USERNAME: {{PCF_USERNAME}}
+        PCF_PASSWORD: {{PCF_PASSWORD}}
+        PCF_ORG: {{PCF_ORG}}
+        PCF_SPACE: {{PCF_SPACE}}
       privileged: true
       file: pcf-ers-demo-canary/concourse/tasks/canary-push.yml
 
@@ -81,7 +93,19 @@ jobs:
       file: pcf-ers-demo-canary/concourse/tasks/uattest.yml
       on_success:
         task: scale-canary
+        params:
+          PCF_TARGET_URL: {{PCF_TARGET_URL}}
+          PCF_USERNAME: {{PCF_USERNAME}}
+          PCF_PASSWORD: {{PCF_PASSWORD}}
+          PCF_ORG: {{PCF_ORG}}
+          PCF_SPACE: {{PCF_SPACE}}
         file: pcf-ers-demo-canary/concourse/tasks/canary-scale.yml
       on_failure:
         task: canary-rollback
+        params:
+          PCF_TARGET_URL: {{PCF_TARGET_URL}}
+          PCF_USERNAME: {{PCF_USERNAME}}
+          PCF_PASSWORD: {{PCF_PASSWORD}}
+          PCF_ORG: {{PCF_ORG}}
+          PCF_SPACE: {{PCF_SPACE}}
         file: pcf-ers-demo-canary/concourse/tasks/canary-rollback.yml
