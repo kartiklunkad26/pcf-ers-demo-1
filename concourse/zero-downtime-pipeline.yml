@@ -1,0 +1,29 @@
+resources:
+  - name: pcf-ers-demo
+    type: git
+    source:
+      uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
+      branch: master
+
+jobs:
+  - name: test
+    plan:
+    - get: pcf-ers-demo
+      trigger: true
+    - task: test
+      file: pcf-ers-demo/concourse/tasks/test.yml
+
+  - name: zero-downtime-deploy
+    plan:
+    - get: pcf-ers-demo
+      trigger: true
+      passed: [test]
+    - task: zero-downtime-deploy
+      params:
+        PCF_TARGET_URL: {{PCF_TARGET_URL}}
+        PCF_USERNAME: {{PCF_USERNAME}}
+        PCF_PASSWORD: {{PCF_PASSWORD}}
+        PCF_ORG: {{PCF_ORG}}
+        PCF_SPACE: {{PCF_SPACE}}
+      privileged: true
+      file: pcf-ers-demo/concourse/tasks/zero-downtime-push.yml

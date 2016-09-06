@@ -1,0 +1,37 @@
+resources:
+  - name: pcf-ers-demo
+    type: git
+    source:
+      uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
+      branch: master
+
+  - name: deployment-scripts
+    type: git
+    source:
+      uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
+      branch: master
+
+  - name: pcf-ers-demo-releases
+    type: github-release
+    source:
+      user: jwilliams-pivotal
+      repository: pcf-ers-demo
+
+jobs:
+  - name: deploy-A-and-B
+    plan:
+    - aggregate:
+      - get: deployment-scripts
+      - get: pcf-ers-demo-releases
+        version:
+          in:
+          tag: v1.0.0-AB
+    - task: deploy-ab
+      params:
+        PCF_TARGET_URL: {{PCF_TARGET_URL}}
+        PCF_DOMAIN: {{PCF_DOMAIN}}
+        PCF_USERNAME: {{PCF_USERNAME}}
+        PCF_PASSWORD: {{PCF_PASSWORD}}
+        PCF_ORG: {{PCF_ORG}}
+        PCF_SPACE: {{PCF_SPACE}}
+      file: deployment-scripts/concourse/tasks/ab-push.yml

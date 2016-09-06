@@ -90,7 +90,7 @@ jobs:
       trigger: true
       passed: [deploy-canary]
     - task: uattest-canary
-      file: pcf-ers-demo-canary/concourse/tasks/uattest.yml
+      file: pcf-ers-demo-canary/concourse/tasks/canary-uattest.yml
       on_success:
         task: scale-canary
         params:

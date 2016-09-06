@@ -1,0 +1,56 @@
+resources:
+  - name: pcf-ers-demo
+    type: git
+    source:
+      uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
+      branch: master
+
+jobs:
+  - name: unittest
+    plan:
+    - get: pcf-ers-demo
+    - task: unittest
+      file: pcf-ers-demo/concourse/tasks/test.yml
+
+  - name: deploy
+    plan:
+    - get: pcf-ers-demo
+      trigger: true
+      passed: [unittest]
+    - task: deploy
+      params:
+        PCF_DOMAIN: {{PCF_DOMAIN}}
+        PCF_TARGET_URL: {{PCF_TARGET_URL}}
+        PCF_USERNAME: {{PCF_USERNAME}}
+        PCF_PASSWORD: {{PCF_PASSWORD}}
+        PCF_ORG: {{PCF_ORG}}
+        PCF_SPACE: {{PCF_SPACE}}
+      privileged: true
+      file: pcf-ers-demo/concourse/tasks/canary-push.yml
+
+  - name: uat
+    plan:
+    - get: pcf-ers-demo
+      trigger: true
+      passed: [deploy]
+    - task: uattest
+      file: pcf-ers-demo/concourse/tasks/canary-uattest.yml
+      on_success:
+        task: scale
+        params:
+          PCF_TARGET_URL: {{PCF_TARGET_URL}}
+          PCF_DOMAIN: {{PCF_DOMAIN}}
+          PCF_USERNAME: {{PCF_USERNAME}}
+          PCF_PASSWORD: {{PCF_PASSWORD}}
+          PCF_ORG: {{PCF_ORG}}
+          PCF_SPACE: {{PCF_SPACE}}
+        file: pcf-ers-demo/concourse/tasks/canary-scale.yml
+      on_failure:
+        task: rollback
+        params:
+          PCF_TARGET_URL: {{PCF_TARGET_URL}}
+          PCF_USERNAME: {{PCF_USERNAME}}
+          PCF_PASSWORD: {{PCF_PASSWORD}}
+          PCF_ORG: {{PCF_ORG}}
+          PCF_SPACE: {{PCF_SPACE}}
+        file: pcf-ers-demo/concourse/tasks/canary-rollback.yml

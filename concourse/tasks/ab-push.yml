@@ -16,6 +16,6 @@ run:
   - |
     cf login -a $PCF_TARGET_URL --skip-ssl-validation -u $PCF_USERNAME -p $PCF_PASSWORD -o $PCF_ORG -s $PCF_SPACE
     cf push attendees-a -f pcf-ers-demo-releases/manifest.yml -p pcf-ers-demo-releases/pcf-ers-demo-A.jar
-    cf map-route attendees-a local.pcfdev.io --hostname attendees-ab
+    cf map-route attendees-a $PCF_DOMAIN --hostname attendees-ab
     cf push attendees-b -f pcf-ers-demo-releases/manifest.yml -p pcf-ers-demo-releases/pcf-ers-demo-B.jar
-    cf map-route attendees-b local.pcfdev.io --hostname attendees-ab
+    cf map-route attendees-b $PCF_DOMAIN --hostname attendees-ab

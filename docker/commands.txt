@@ -6,4 +6,6 @@ docker push williamsjt/cloudfoundry
 
 fly -t lite login -c http://192.168.100.4:8080
 
-fly -t lite set-pipeline -p pcf-ers-demo -c pipeline.yml -l parameters.yml
+fly -t lite set-pipeline -p zero-downtime -c zero-downtime-pipeline.yml -l parameters.yml
+fly -t lite set-pipeline -p A-B -c ab-pipeline.yml -l parameters.yml
+fly -t lite set-pipeline -p canary -c canary-pipeline.yml -l parameters.yml
