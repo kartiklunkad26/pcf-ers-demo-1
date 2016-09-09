@@ -14,6 +14,7 @@ run:
   args:
   - -exc
   - |
+    sed -e "s/String appVersion = \"1.0\";/String appVersion = \"2.0\";/" -i "" pcf-ers-demo/src/main/java/io/pivotal/pcf/sme/ers/client/ui/controller/AttendeeService.java
     pcf-ers-demo/mvnw -f pcf-ers-demo/pom.xml package -DskipTests=true
     cf login -a $PCF_TARGET_URL --skip-ssl-validation -u $PCF_USERNAME -p $PCF_PASSWORD -o $PCF_ORG -s $PCF_SPACE
     cf zero-downtime-push attendees -f pcf-ers-demo/manifest.yml -p pcf-ers-demo/target/pcf-ers-demo.jar
