@@ -14,10 +14,10 @@ run:
   args:
   - -exc
   - |
-    test_url=http://attendees-canary.local2.pcfdev.io/basics
+    test_url=http://attendees-canary.local2.pcfdev.io/basics2
     urlstatus=$(curl -o /dev/null --silent --head --write-out '%{http_code}' ${test_url})
-    code=404
-    if [ $urlstatus = $code ]
+    code=200
+    if [ $urlstatus ne $code ]
     then
       exit 1
     fi
