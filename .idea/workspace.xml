@@ -102,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-rollback.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.3653846">
-              <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+              <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -894,12 +894,12 @@
       <workItem from="1472700593257" duration="1056000" />
       <workItem from="1472840628711" duration="6944000" />
       <workItem from="1473119217549" duration="101000" />
-      <workItem from="1473119815477" duration="11496000" />
+      <workItem from="1473119815477" duration="11576000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95455000" />
+    <option name="totallyTimeSpent" value="95535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="268" y="130" width="1652" height="900" extended-state="0" />
@@ -1332,7 +1332,7 @@
     <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-rollback.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3653846">
-          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
           <folding />
         </state>
       </provider>
