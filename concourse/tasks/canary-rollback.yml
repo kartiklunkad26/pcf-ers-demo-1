@@ -11,5 +11,6 @@ run:
   args:
   - -exc
   - |
+    TSTAMP=`date +"%m-%d-%y-%H:%m"`
     cf login -a $PCF_TARGET_URL --skip-ssl-validation -u $PCF_USERNAME -p $PCF_PASSWORD -o $PCF_ORG -s $PCF_SPACE
-    cf delete attendees-canary -f
+    cf rename attendees-canary attendees-canary-$TSTAMP
