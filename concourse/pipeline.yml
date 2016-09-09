@@ -74,7 +74,6 @@ jobs:
   - name: deploy-canary
     plan:
     - get: pcf-ers-demo
-      trigger: true
       passed: [test]
     - task: canary-push
       params:
@@ -97,6 +96,7 @@ jobs:
         task: scale-canary
         params:
           PCF_TARGET_URL: {{PCF_TARGET_URL}}
+          PCF_DOMAIN: {{PCF_DOMAIN}}
           PCF_USERNAME: {{PCF_USERNAME}}
           PCF_PASSWORD: {{PCF_PASSWORD}}
           PCF_ORG: {{PCF_ORG}}
