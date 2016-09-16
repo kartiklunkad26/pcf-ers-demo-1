@@ -7,3 +7,8 @@ docker push williamsjt/cloudfoundry
 fly -t lite login -c http://192.168.100.4:8080
 
 fly -t lite set-pipeline -p pcf-ers-demo -c pipeline.yml -l parameters.yml
+
+
+1 minute - tests start
+2:07 zero downtime deploy starts
+3:20 zero downtime deploy completes

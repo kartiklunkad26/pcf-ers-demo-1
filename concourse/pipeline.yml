@@ -3,14 +3,14 @@ groups:
   jobs:
   - zero-downtime-deploy
   - test
-- name: A/B
-  jobs:
-  - deploy-A-and-B
 - name: Canary
   jobs:
   - test
   - deploy-canary
   - uat-canary
+- name: A/B
+  jobs:
+  - deploy-A-and-B
 - name: Teardown
   jobs:
   - teardown
@@ -95,6 +95,8 @@ jobs:
       trigger: true
       passed: [deploy-canary]
     - task: canary-uattest
+      params:
+        UAT_URL: {{UAT_URL}}
       file: pcf-ers-demo/concourse/tasks/canary-uattest.yml
       on_success:
         task: scale-canary

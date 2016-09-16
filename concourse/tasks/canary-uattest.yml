@@ -14,7 +14,7 @@ run:
   args:
   - -exc
   - |
-    test_url=http://attendees-canary.local2.pcfdev.io/basics
+    test_url=$UAT_URL
     urlstatus=$(curl -o /dev/null --silent --head --write-out '%{http_code}' ${test_url})
     code=200
     if [ $urlstatus -ne $code ]
