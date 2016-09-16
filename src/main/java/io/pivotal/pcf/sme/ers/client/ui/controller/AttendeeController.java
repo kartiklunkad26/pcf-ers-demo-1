@@ -60,7 +60,7 @@ public class AttendeeController {
 	 * 
 	 * @throws Exception
 	 */
-	@RequestMapping(value = "/basics", method = RequestMethod.GET)
+	@RequestMapping(value = "/basics", method = {RequestMethod.GET, RequestMethod.HEAD})
 	public String kill(@RequestParam(value = "doit", required = false) boolean doit, Model model) throws Exception {
 
 		addAppEnv(model);
