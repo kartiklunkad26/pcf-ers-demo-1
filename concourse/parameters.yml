@@ -13,4 +13,4 @@ PCF_PASSWORD: admin
 PCF_ORG: pcfdev-org
 PCF_SPACE: pcfdev-space
 
-UAT_URL=http://attendees.local2.pcfdev.io/basics2
+UAT_URL: http://attendees.local2.pcfdev.io/basics2
