@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8591b4a8-cb36-42d5-8f13-f9c14175fef3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/concourse/tasks/teardown-all.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/pipeline.yml" afterPath="$PROJECT_DIR$/concourse/pipeline.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/tasks/canary-rollback.yml" afterPath="$PROJECT_DIR$/concourse/tasks/canary-rollback.yml" />
     </list>
     <ignored path="pcf-ers-demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +28,8 @@
       <file leaf-file-name="pipeline.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30546623">
-              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.8778135">
+              <caret line="129" column="55" selection-start-line="129" selection-start-column="55" selection-end-line="129" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -772,12 +769,12 @@
       <workItem from="1472840628711" duration="6944000" />
       <workItem from="1473119217549" duration="101000" />
       <workItem from="1473119815477" duration="12099000" />
-      <workItem from="1474042741884" duration="4408000" />
+      <workItem from="1474042741884" duration="4786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100466000" />
+    <option name="totallyTimeSpent" value="100844000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1447" height="1053" extended-state="6" />
@@ -1238,8 +1235,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30546623">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.8778135">
+          <caret line="129" column="55" selection-start-line="129" selection-start-column="55" selection-end-line="129" selection-end-column="55" />
           <folding />
         </state>
       </provider>

@@ -121,4 +121,10 @@ jobs:
     - get: pcf-ers-demo
       trigger: true
     - task: teardown
+      params:
+        PCF_TARGET_URL: {{PCF_TARGET_URL}}
+        PCF_USERNAME: {{PCF_USERNAME}}
+        PCF_PASSWORD: {{PCF_PASSWORD}}
+        PCF_ORG: {{PCF_ORG}}
+        PCF_SPACE: {{PCF_SPACE}}
       file: pcf-ers-demo/concourse/tasks/teardown-all.yml
