@@ -1,4 +1,0 @@
-#!/bin/bash
-sed -e "s/String appVersion = \"1.0\";/String appVersion = \"2.0\";/" -i "" src/main/java/io/pivotal/pcf/sme/ers/client/ui/controller/AttendeeService.java
-
-mvn clean package -DskipTests=true
