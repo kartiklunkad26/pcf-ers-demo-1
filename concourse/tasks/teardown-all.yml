@@ -12,4 +12,8 @@ run:
   - -exc
   - |
     cf login -a $PCF_TARGET_URL --skip-ssl-validation -u $PCF_USERNAME -p $PCF_PASSWORD -o $PCF_ORG -s $PCF_SPACE
-    cf rename attendees-canary attendees-canary-fail
+    cf delete -f attendees
+    cf delete -f attendees-a
+    cf delete -f attendees-b
+    cf delete -f attendees-canary
+    cf delete -f attendees-canary-fail
