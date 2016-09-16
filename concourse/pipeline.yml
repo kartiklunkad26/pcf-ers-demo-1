@@ -119,7 +119,7 @@ jobs:
   - name: teardown
     plan:
     - get: pcf-ers-demo
-      trigger: true
+      trigger: false
     - task: teardown
       params:
         PCF_TARGET_URL: {{PCF_TARGET_URL}}
