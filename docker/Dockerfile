@@ -11,4 +11,8 @@ RUN git clone https://github.com/jwilliams-pivotal/pcf-ers-demo.git
 RUN cd ./pcf-ers-demo && ./mvnw -f ./pom.xml package -DskipTests=true
 RUN rm -rf ./pcf-ers-demo
 
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN apt-get install -y nodejs
+RUN npm install -g newman
+
 WORKDIR /data
