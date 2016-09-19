@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8591b4a8-cb36-42d5-8f13-f9c14175fef3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/pivotal/pcf/sme/ers/client/ui/controller/AttendeeService.java" afterPath="$PROJECT_DIR$/src/main/java/io/pivotal/pcf/sme/ers/client/ui/controller/AttendeeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/postman/UAT_pcf-ers-demo.postman_collection" afterPath="$PROJECT_DIR$/concourse/postman/UAT_pcf-ers-demo.postman_collection" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/tasks/canary-uattest.yml" afterPath="$PROJECT_DIR$/concourse/tasks/canary-uattest.yml" />
     </list>
     <ignored path="pcf-ers-demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,21 +76,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AttendeeService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AttendeeService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/pivotal/pcf/sme/ers/client/ui/controller/AttendeeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54545456">
+            <state vertical-scroll-proportion="0.0">
               <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canary-uattest.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="canary-uattest.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-uattest.yml">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3568075">
+              <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UAT_pcf-ers-demo.postman_collection" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/concourse/postman/UAT_pcf-ers-demo.postman_collection">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
+              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -110,16 +121,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teardown-all.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/concourse/tasks/teardown-all.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -175,11 +176,11 @@
         <option value="$PROJECT_DIR$/concourse/tasks/teardown-all.yml" />
         <option value="$PROJECT_DIR$/docker/commands.txt" />
         <option value="$PROJECT_DIR$/docker/Dockerfile" />
-        <option value="$PROJECT_DIR$/concourse/postman/UAT_pcf-ers-demo.postman_collection" />
-        <option value="$PROJECT_DIR$/concourse/tasks/canary-uattest.yml" />
         <option value="$PROJECT_DIR$/concourse/parameters.yml" />
         <option value="$PROJECT_DIR$/concourse/pipeline.yml" />
         <option value="$PROJECT_DIR$/src/main/java/io/pivotal/pcf/sme/ers/client/ui/controller/AttendeeService.java" />
+        <option value="$PROJECT_DIR$/concourse/postman/UAT_pcf-ers-demo.postman_collection" />
+        <option value="$PROJECT_DIR$/concourse/tasks/canary-uattest.yml" />
       </list>
     </option>
   </component>
@@ -196,10 +197,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="250" />
-    <option name="y" value="120" />
-    <option name="width" value="1616" />
-    <option name="height" value="956" />
+    <option name="x" value="79" />
+    <option name="y" value="45" />
+    <option name="width" value="1825" />
+    <option name="height" value="972" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -911,15 +912,15 @@
       <workItem from="1472840628711" duration="6944000" />
       <workItem from="1473119217549" duration="101000" />
       <workItem from="1473119815477" duration="12099000" />
-      <workItem from="1474042741884" duration="9321000" />
+      <workItem from="1474042741884" duration="9733000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105379000" />
+    <option name="totallyTimeSpent" value="105791000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="250" y="120" width="1616" height="956" extended-state="0" />
+    <frame x="79" y="45" width="1825" height="972" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -936,7 +937,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24841169" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17554682" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26847035" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1289,14 +1290,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concourse/postman/UAT_pcf-ers-demo.postman_collection">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/concourse/tasks/test.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1361,6 +1354,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/pivotal/pcf/sme/ers/client/ui/controller/AttendeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concourse/postman/UAT_pcf-ers-demo.postman_collection">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1371,16 +1380,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-uattest.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/pivotal/pcf/sme/ers/client/ui/controller/AttendeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54545456">
-          <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.3568075">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
           <folding />
         </state>
       </provider>
