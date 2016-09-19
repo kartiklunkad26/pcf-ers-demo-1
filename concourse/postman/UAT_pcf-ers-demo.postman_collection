@@ -19,7 +19,7 @@
 				}
 			],
 			"request": {
-				"url": "http://attendees.local.pcfdev.io/basics",
+				"url": "http://attendees-canary.local.pcfdev.io/basics",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -42,7 +42,7 @@
 				}
 			],
 			"request": {
-				"url": "http://attendees.local.pcfdev.io/go",
+				"url": "http://attendees-canary.local.pcfdev.io/go",
 				"method": "GET",
 				"header": [],
 				"body": {
