@@ -37,7 +37,7 @@
 					"listen": "test",
 					"script": {
 						"type": "text/javascript",
-						"exec": "var jsonData = JSON.parse(responseBody);\ntests[\"Response time is less than 200ms\"] = responseTime < 200;\ntests[\"Status code is 200\"] = responseCode.code === 200;\ntests[\"Body is correct\"] = responseBody === \"[\\\"attendees\\\",\\\"0\\\",\\\"CANARY\\\"]\";"
+						"exec": "tests[\"Response time is less than 200ms\"] = responseTime < 200;\ntests[\"Status code is 200\"] = responseCode.code === 200;\nvar jsonData = JSON.parse(responseBody);\ntests[\"JSON Response matches v2 feature\"] = jsonData[2] === \"2.0\";"
 					}
 				}
 			],
