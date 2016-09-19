@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8591b4a8-cb36-42d5-8f13-f9c14175fef3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/parameters.yml" afterPath="$PROJECT_DIR$/concourse/parameters.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/concourse/pipeline.yml" afterPath="$PROJECT_DIR$/concourse/pipeline.yml" />
     </list>
     <ignored path="pcf-ers-demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pipeline.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pipeline.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2272727">
-              <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -75,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canary-uattest.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="canary-uattest.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-uattest.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.36363637">
               <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
               <folding />
             </state>
@@ -175,11 +175,11 @@
         <option value="$PROJECT_DIR$/concourse/tasks/teardown-all.yml" />
         <option value="$PROJECT_DIR$/docker/commands.txt" />
         <option value="$PROJECT_DIR$/src/main/java/io/pivotal/pcf/sme/ers/client/ui/controller/AttendeeService.java" />
-        <option value="$PROJECT_DIR$/concourse/pipeline.yml" />
         <option value="$PROJECT_DIR$/docker/Dockerfile" />
         <option value="$PROJECT_DIR$/concourse/postman/UAT_pcf-ers-demo.postman_collection" />
         <option value="$PROJECT_DIR$/concourse/tasks/canary-uattest.yml" />
         <option value="$PROJECT_DIR$/concourse/parameters.yml" />
+        <option value="$PROJECT_DIR$/concourse/pipeline.yml" />
       </list>
     </option>
   </component>
@@ -789,12 +789,12 @@
       <workItem from="1472840628711" duration="6944000" />
       <workItem from="1473119217549" duration="101000" />
       <workItem from="1473119815477" duration="12099000" />
-      <workItem from="1474042741884" duration="9172000" />
+      <workItem from="1474042741884" duration="9215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105230000" />
+    <option name="totallyTimeSpent" value="105273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="250" y="120" width="1616" height="956" extended-state="0" />
@@ -1199,14 +1199,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-uattest.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-scale.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1257,8 +1249,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/concourse/pipeline.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2272727">
-          <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concourse/tasks/canary-uattest.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36363637">
+          <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
           <folding />
         </state>
       </provider>

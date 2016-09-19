@@ -95,8 +95,6 @@ jobs:
       trigger: true
       passed: [deploy-canary]
     - task: canary-uattest
-      params:
-        UAT_URL: {{UAT_URL}}
       file: pcf-ers-demo/concourse/tasks/canary-uattest.yml
       on_success:
         task: scale-canary
