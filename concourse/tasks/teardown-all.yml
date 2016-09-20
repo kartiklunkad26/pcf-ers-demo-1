@@ -16,4 +16,3 @@ run:
     cf delete -f $APP_NAME-a
     cf delete -f $APP_NAME-b
     cf delete -f $APP_NAME-canary
-    cf delete -f $APP_NAME-canary-fail
