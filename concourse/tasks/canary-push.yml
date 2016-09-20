@@ -17,7 +17,7 @@ run:
     sed -e "s/String appVersion = \"2.0\";/String appVersion = \"CANARY\";/" -i ./pcf-ers-demo/src/main/java/io/pivotal/pcf/sme/ers/client/ui/controller/AttendeeService.java
     pcf-ers-demo/mvnw -f pcf-ers-demo/pom.xml package -DskipTests=true
     cf login -a $PCF_TARGET_URL --skip-ssl-validation -u $PCF_USERNAME -p $PCF_PASSWORD -o $PCF_ORG -s $PCF_SPACE
-    cf push attendees-canary -f pcf-ers-demo/manifest.yml -p pcf-ers-demo/target/pcf-ers-demo.jar
+    cf push $APP_NAME-canary -f pcf-ers-demo/manifest.yml -p pcf-ers-demo/target/pcf-ers-demo.jar
 
 params:
   MAVEN_BASEDIR: pcf-ers-demo

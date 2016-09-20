@@ -54,6 +54,7 @@ jobs:
         PCF_PASSWORD: {{PCF_PASSWORD}}
         PCF_ORG: {{PCF_ORG}}
         PCF_SPACE: {{PCF_SPACE}}
+        APP_NAME: {{APP_NAME}}
       privileged: true
       file: pcf-ers-demo/concourse/tasks/zero-downtime-push.yml
 
@@ -73,6 +74,7 @@ jobs:
         PCF_PASSWORD: {{PCF_PASSWORD}}
         PCF_ORG: {{PCF_ORG}}
         PCF_SPACE: {{PCF_SPACE}}
+        APP_NAME: {{APP_NAME}}
       file: deployment-scripts/concourse/tasks/ab-push.yml
 
   - name: deploy-canary
@@ -86,6 +88,7 @@ jobs:
         PCF_PASSWORD: {{PCF_PASSWORD}}
         PCF_ORG: {{PCF_ORG}}
         PCF_SPACE: {{PCF_SPACE}}
+        APP_NAME: {{APP_NAME}}
       privileged: true
       file: pcf-ers-demo/concourse/tasks/canary-push.yml
 
@@ -105,6 +108,7 @@ jobs:
           PCF_PASSWORD: {{PCF_PASSWORD}}
           PCF_ORG: {{PCF_ORG}}
           PCF_SPACE: {{PCF_SPACE}}
+          APP_NAME: {{APP_NAME}}
         file: pcf-ers-demo/concourse/tasks/canary-scale.yml
       on_failure:
         task: canary-rollback
@@ -114,6 +118,7 @@ jobs:
           PCF_PASSWORD: {{PCF_PASSWORD}}
           PCF_ORG: {{PCF_ORG}}
           PCF_SPACE: {{PCF_SPACE}}
+          APP_NAME: {{APP_NAME}}
         file: pcf-ers-demo/concourse/tasks/canary-rollback.yml
 
   - name: teardown
@@ -127,4 +132,5 @@ jobs:
         PCF_PASSWORD: {{PCF_PASSWORD}}
         PCF_ORG: {{PCF_ORG}}
         PCF_SPACE: {{PCF_SPACE}}
+        APP_NAME: {{APP_NAME}}
       file: pcf-ers-demo/concourse/tasks/teardown-all.yml

@@ -1,0 +1,57 @@
+{
+	"variables": [],
+	"info": {
+		"name": "UAT_pcf-ers-demo",
+		"_postman_id": "50e868e3-d5d3-b856-927b-d259e2413790",
+		"description": "Verify that the application behaves as expected for users. ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UAT Basics Screen",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;\ntests[\"Action Button Has Correct Label\"] = responseBody.has(\"Start Load Test\");"
+					}
+				}
+			],
+			"request": {
+				"url": "http://attendees-regions-canary.cfapps.io/basics",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UAT Basics REST Endpoint",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Response time is less than 200ms\"] = responseTime < 200;\ntests[\"Status code is 200\"] = responseCode.code === 200;\nvar jsonData = JSON.parse(responseBody);\ntests[\"JSON Response matches v2 feature\"] = jsonData[2] === \"2.0\";"
+					}
+				}
+			],
+			"request": {
+				"url": "http://attendees-regions-canary.cfapps.io/go",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
