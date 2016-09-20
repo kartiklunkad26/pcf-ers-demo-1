@@ -6,6 +6,9 @@ image_resource:
     repository: williamsjt/cloudfoundry
     tag: latest
 
+inputs:
+  - name: pcf-ers-demo
+
 run:
   path: sh
   args:
