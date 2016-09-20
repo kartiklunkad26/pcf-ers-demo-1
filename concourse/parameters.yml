@@ -1,8 +1,0 @@
-# PCF settings
-PCF_TARGET_URL: api.run.pivotal.io
-PCF_DOMAIN: cfapps.io
-PCF_USERNAME: jwilliams@pivotal.io
-PCF_PASSWORD: 14theroad
-PCF_ORG: Southeast
-PCF_SPACE: jwilliams
-APP_NAME: attendees-regions
