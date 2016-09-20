@@ -19,3 +19,6 @@ run:
     pcf-ers-demo/mvnw -f pcf-ers-demo/pom.xml package -DskipTests=true
     cf login -a $PCF_TARGET_URL --skip-ssl-validation -u $PCF_USERNAME -p $PCF_PASSWORD -o $PCF_ORG -s $PCF_SPACE
     cf push $APP_NAME -f pcf-ers-demo/manifest.yml -p pcf-ers-demo/target/pcf-ers-demo.jar
+
+params:
+  MAVEN_BASEDIR: pcf-ers-demo
