@@ -60,10 +60,8 @@ public class AttendeeController {
 	 * 
 	 * @throws Exception
 	 */
-	@RequestMapping(value = "/basics", method = {RequestMethod.GET, RequestMethod.HEAD})
+	@RequestMapping(value = "/services", method = {RequestMethod.GET, RequestMethod.HEAD})
 	public String kill(@RequestParam(value = "doit", required = false) boolean doit, Model model) throws Exception {
-
-		addAppEnv(model);
 
 		if (doit) {
 			model.addAttribute("killed", true);
@@ -82,7 +80,9 @@ public class AttendeeController {
 			new Thread(killTask).start();
 		}
 
-		return "basics";
+		attendees(model);
+
+		return "services";
 
 	}
 	
@@ -101,24 +101,8 @@ public class AttendeeController {
 		model.addAttribute("ssh_file", f.getAbsoluteFile());
 		addAppEnv(model);
 
-		return "basics";
-		
-	}
-
-	/**
-	 * SERVICES
-	 * 
-	 * @param model
-	 *            The model for this action.
-	 * @return The path to the view.
-	 */
-	@RequestMapping(value = "/services", method = RequestMethod.GET)
-	public String attendees(Model model) throws Exception {
-
-		model.addAttribute("attendees", attendeeService.getAttendees());
-		
-		addAppEnv(model);
 		return "services";
+		
 	}
 	
 	/**
@@ -130,7 +114,6 @@ public class AttendeeController {
 	 */
 	@RequestMapping(value = "/clean", method = RequestMethod.GET)
 	public String clean(Model model) throws Exception {
-
 		attendeeService.deleteAll();
 		return attendees(model);
 	}
@@ -169,31 +152,20 @@ public class AttendeeController {
 		return "services";
 	}
 
-	/**
-	 * BLUEGREEN
-	 * 
-	 * @param model
-	 * @return
-	 * @throws Exception
-	 */
-	@RequestMapping("/bluegreen")
-	public String bluegreen(Model model) throws Exception {
+	private String attendees(Model model) throws Exception {
 
-		for (String key : System.getenv().keySet()) {
-			System.out.println(key + ":" + System.getenv(key));
-		}
+		model.addAttribute("attendees", attendeeService.getAttendees());
 
 		addAppEnv(model);
-
-		return "bluegreen";
+		return "services";
 	}
+
 
 	///////////////////////////////////////
 	// Helper Methods
 	///////////////////////////////////////
 
 	private void addAppEnv(Model model) throws Exception {
-
 		Map<String, Object> modelMap = attendeeService.addAppEnv();
 		model.addAllAttributes(modelMap);
 	}

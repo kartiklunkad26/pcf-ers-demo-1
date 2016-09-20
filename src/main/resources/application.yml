@@ -13,7 +13,6 @@ spring:
 # Using macros that are replaced by maven build
 info:
   build:
-    artifact: @project.artifactId@
-    name: @project.name@
-    description: @project.description@
-    version: @project.version@
+    artifact: pcf-ers-demo
+    name: pcf-ers-demo
+    description: pcf-ers-demo

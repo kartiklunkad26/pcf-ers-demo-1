@@ -6,103 +6,182 @@
 
 <body>
 
+<nav th:replace="fragments/layout :: navigation"></nav>
 
-	<nav th:replace="fragments/layout :: navigation"></nav>
-	<!--  PAGE BODY -->
-	<div class="container" role="main">
+<!--  PAGE BODY -->
+<div class="container" role="main">
 
-		<span id="tutorialName" style="display: none;">services</span>
+    <span id="tutorialName" style="display: none;">basics</span>
 
-		<div class="page-header">
-			<p>&nbsp;</p>
-			<h1>Services</h1>
-		</div>
+    <div class="page-header">
+        <p>&nbsp;</p>
+        <h2>Loan Application Tool</h2>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div id="bluegreenBlock">
+                                <div class="row">
+
+                                    <form id="attendee-form" class="form-inline"
+                                          action="add-attendee" method="post" role="form">
+                                        <div class="col-xs-2">
+                                            <input type="text" class="form-control" required="required"
+                                                   id="firstName" placeholder="First" name="firstName"></input>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <input type="text" class="form-control" required="required"
+                                                   id="lastName" placeholder="Last" name="lastName"></input>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <input type="email" class="form-control" required="required"
+                                                   id="emailAddress" placeholder="Email" name="emailAddress"></input>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <button type="submit" class="btn btn-default ">Add
+                                                Applicant
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                            <table th:replace="fragments/list :: attendeeList">
+                            </table>
+                            <h4 th:if="${applicationServices.isEmpty()}">Using embedded H2
+                                DB</h4>
+                            <h4 th:each="instance : ${applicationServices}">
+                                <b><span th:text="${instance.key}">keyvalue</span></b> <span
+                                    th:text="${instance.value}">num</span> <br /></h4>
+                        </div>
+                        <div class="panel-footer clearfix">
+                            <div class="pull-right">
+                                <a href="/services" class="btn btn-default">Refresh</a> <a
+                                    href="/clean" class="btn btn-default">Erase All Records</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body" align="center">
+                    <img id="up" src="/images/up.jpg" style="display: none"/>
+                    <img id="down" src="/images/down.jpg" style="display: none"/>
+                    <p id="loadResults"></p>
+                </div>
+                <div class="panel-footer clearfix">
+
+                    <div class="pull-left">
+                        <a id="loadButton" href="javascript:toggleTimer();"
+                           class="btn btn-default">Start Load Test</a>
+                    </div>
+
+                    <div class="pull-right">
+                        <a
+                                href="javascript:kill();"
+                                class="btn btn-default">Kill</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-		<div class="row">
-			<div class="col-md-12">
-				<p>By now we understand a bit about how applications are being
-					managed in PCF, what about services? Let's think of services as
-					external application dependencies like a datastore or messaging
-					system. But it can represent many other things that we would not
-					typically think of it.</p>
+</div>
+<!--  /.PAGE BODY -->
 
-				<p>Remember the application diagram from the main page?</p>
+<footer th:replace="fragments/layout :: footer" class="footer">
+</footer>
 
-				<p>
-					We often hear about <b>The Twelve-Factor App</b> as a great
-					methodology for building modern applications. Pivotal Cloud Foundry
-					Service strategy is very much like <a
-						href="http://12factor.net/backing-services">IV - Backing
-						Services factor</a>. Services are <i>attached</i>, in PCF case, <i>bound</i>
-					to applications.
-				</p>
-			</div>
+<script th:replace="fragments/layout :: app-instance-script"></script>
 
-		</div>
+<script>
+    var INTERVAL = 1000
+    var timerID = 0;
+    var load = {};
+    var total = 0;
 
+    function toggleTimer() {
+        if (timerID == 0) {
+            startTimer();
+            $('#loadButton').text("Stop Load Test");
+        } else {
+            stopTimer();
+            $('#loadButton').text("Start Load Test");
+        }
+    }
 
-		<div class="row">
+    function startTimer() {
+        timerID = setInterval(startLoad, INTERVAL);
+    }
 
-			<div class="col-md-6">
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div id="bluegreenBlock">
-							<h4>Attendees Database Tool</h4>
+    function stopTimer() {
+        if (timerID) {
+            clearInterval(timerID);
+            timerID = 0;
+        }
+        total = 0;
+        load = {};
+    }
 
-							<div class="row">
-								<form id="attendee-form" class="form-inline"
-									action="add-attendee" method="post" role="form">
-									<div class="col-xs-2">
-										<input type="text" class="form-control" required="required"
-											id="firstName" placeholder="First" name="firstName"></input>
-									</div>
-									<div class="col-xs-2">
-										<input type="text" class="form-control" required="required"
-											id="lastName" placeholder="Last" name="lastName"></input>
-									</div>
-									<div class="col-xs-4">
-										<input type="email" class="form-control" required="required"
-											id="emailAddress" placeholder="Email" name="emailAddress"></input>
-									</div>
-									<div class="col-xs-2">
-										<button type="submit" class="btn btn-primary ">Add
-											Attendee</button>
-									</div>
-								</form>
-							</div>
+    function kill() {
+        $.get("/services?doit=true");
+    }
 
-						</div>
-						<table th:replace="fragments/list :: attendeeList">
-						</table>
+    function startLoad() {
 
-					</div>
-					<div class="panel-footer clearfix">
-						<div class="pull-right">
-							<a href="/services" class="btn btn-default">Refresh</a> <a
-								href="/clean" class="btn btn-danger">Erase All Records</a>
-						</div>
-					</div>
-				</div>
-			</div>
+        $.get("/go", function (appEnv) {
 
-			<div class="col-md-6">
-				<div th:replace="fragments/layout :: tutorial"></div>
-			</div>
+            total++;
 
-		</div>
-		<!-- ROW -->
+            var appName = appEnv[0]
+            var appIndex = appEnv[1]
+            var appVersion = appEnv[2]
 
-	</div>
-	<!-- CONTAINER -->
+            var appKey = appName + '-' + appIndex
 
-	<!--  /.PAGE BODY -->
+            if (appKey in load) {
+                load[appKey] = 1 + load[appKey];
+            } else {
+                load[appKey] = 1;
+            }
 
-	<footer th:replace="fragments/layout :: footer" class="footer">
-	</footer>
+            var html = '';
 
-	<script th:replace="fragments/layout :: app-instance-script"></script>
+            // MMB: This can be templated instead of creating HTML in the function
+            //for (appKey in load) {
+
+            value = (load[appKey] / total) * 100;
+
+            html += '<div style="font-size:36px;">' + appVersion + '</div>';
+            html += '<h3>Uptime Duration - ' + total + ' seconds</h3>';
+            $("#down").hide(1000);
+            $("#up").show(1000);
+            //}
+
+            if (timerID != 0) {
+                $('#loadResults').html(html);
+            }
+
+        }).fail(function () {
+            var html = '<h3>Failure Occurred at - ' + total + ' seconds</h3>';
+            $('#loadResults').html(html);
+            $("#up").hide(1000);
+            $("#down").show(1000);
+            toggleTimer();
+        });
+
+    }
+</script>
+
 
 </body>
 
 </html>
+

@@ -10,7 +10,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import io.pivotal.pcf.sme.ers.PcfErsDemo1Application;
+import io.pivotal.pcf.sme.ers.PcfErsDemoApplication;
 import io.pivotal.pcf.sme.ers.server.model.Attendee;
 import io.pivotal.pcf.sme.ers.server.repo.AttendeeRepository;
 
@@ -19,9 +19,9 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = PcfErsDemo1Application.class)
+@SpringApplicationConfiguration(classes = PcfErsDemoApplication.class)
 @WebAppConfiguration
-public class PcfErsDemo1ApplicationTests {
+public class PcfErsDemoApplicationTests {
 	
 	@Autowired
 	private AttendeeRepository attendeeRepository;
