@@ -19,7 +19,7 @@
 				}
 			],
 			"request": {
-				"url": "http://attendees-regions-canary.cfapps.io/basics",
+				"url": "http://attendees-regions-canary.cfapps.io/services",
 				"method": "GET",
 				"header": [],
 				"body": {

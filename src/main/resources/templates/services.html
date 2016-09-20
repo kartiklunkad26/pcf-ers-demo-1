@@ -56,9 +56,9 @@
                             </table>
                             <h4 th:if="${applicationServices.isEmpty()}">Using embedded H2
                                 DB</h4>
-                            <h4 th:each="instance : ${applicationServices}">
-                                <b><span th:text="${instance.key}">keyvalue</span></b> <span
-                                    th:text="${instance.value}">num</span> <br /></h4>
+                            <h4 th:each="instance : ${applicationServices}">Using
+                                <b><span th:text="${instance.key}">keyvalue</span></b> DB
+                            </h4>
                         </div>
                         <div class="panel-footer clearfix">
                             <div class="pull-right">
