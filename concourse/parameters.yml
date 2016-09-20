@@ -1,0 +1,8 @@
+# PCF settings
+PCF_TARGET_URL: api.run.pivotal.io
+PCF_DOMAIN: .io
+PCF_USERNAME: admin
+PCF_PASSWORD: admin
+PCF_ORG: pcfdev-org
+PCF_SPACE: pcfdev-space
+APP_NAME: attendees-regions
