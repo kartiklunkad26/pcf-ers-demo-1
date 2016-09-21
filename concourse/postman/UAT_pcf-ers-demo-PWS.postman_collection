@@ -19,7 +19,7 @@
 				}
 			],
 			"request": {
-				"url": "http://attendees-regions-canary.cfapps.io/services",
+				"url": "http://unsecuredloan-regions-canary.cfapps.io/services",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -42,7 +42,7 @@
 				}
 			],
 			"request": {
-				"url": "http://attendees-regions-canary.cfapps.io/go",
+				"url": "http://unsecuredloan-regions-canary.cfapps.io/go",
 				"method": "GET",
 				"header": [],
 				"body": {
