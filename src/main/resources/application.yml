@@ -8,7 +8,7 @@ ribbon:
 
 spring:
   application:
-    name: attendees
+    name: pcf-ers-demo
     
 # Using macros that are replaced by maven build
 info:
