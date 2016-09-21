@@ -78,7 +78,7 @@ public class AttendeeService {
 	@SuppressWarnings("unchecked")
 	@RequestMapping("/go")
 	public String[] go() throws Exception {
-		//comment
+		//commen
 		String appVersion = "2.0";
 		
 		List<String> values = new ArrayList<String>();
