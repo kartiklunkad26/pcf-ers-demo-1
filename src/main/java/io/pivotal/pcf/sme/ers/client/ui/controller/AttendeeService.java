@@ -79,6 +79,7 @@ public class AttendeeService {
 	@RequestMapping("/go")
 	public String[] go() throws Exception {
 
+		//my code change
 		String appVersion = "2.0";
 		
 		List<String> values = new ArrayList<String>();
