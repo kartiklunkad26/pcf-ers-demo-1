@@ -13,7 +13,7 @@ run:
   - |
     cf login -a $PCF_TARGET_URL --skip-ssl-validation -u $PCF_USERNAME -p $PCF_PASSWORD -o $PCF_ORG -s $PCF_SPACE
     cf map-route $APP_NAME-canary $PCF_DOMAIN --hostname $APP_NAME
-    cf scale $APP_NAME-canary -i 3
+    cf scale $APP_NAME-canary -i 2
     cf unmap-route $APP_NAME $PCF_DOMAIN --hostname $APP_NAME
     cf delete $APP_NAME -f
     cf rename $APP_NAME-canary $APP_NAME
