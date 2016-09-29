@@ -44,22 +44,17 @@ $ ./mvnw spring-boot:run
 
 Then go to the http://localhost:8090 in your browser
 
-### Running on Cloud Foundry
-Take a look at the manifest file for the recommended setting. Adjust them as per your environment.
+## Concourse Setup - Assumes you are doing a PCF based deployment
+- git clone this repo into a new repository. You will need to check in code changes to trigger concourse CI/CD.
 
-## Demo Scripts summary
-The application tries to be self-descriptive. You'll see when you access the application.
-
-## Concourse Setup
 - Make sure that you create a parameters.yml file with the following properties:
-
 ```
 PCF_TARGET_URL: api.run.pivotal.io
 PCF_DOMAIN: cfapps.io
 PCF_USERNAME: {YOUR USER NAME}
-PCF_PASSWORD: {YOUR PASSORD}
-PCF_ORG: Southeast
-PCF_SPACE: jwilliams
+PCF_PASSWORD: {YOUR PASSWORD}
+PCF_ORG: {YOUR ORG}
+PCF_SPACE: {YOUR SPACE}
 APP_NAME: demo-{YOUR APP NAME}
 ```
 
@@ -73,4 +68,13 @@ fly -t lite set-pipeline -p pcf-ers-demo -c ./concourse/pipeline.yml -l ./concou
 fly -t lite unpause-pipeline -p pcf-ers-demo
 ```
 
+## Demo Flow - Zero Downtime
+- Modify 'io.pivotal.pcf.sme.ers.client.ui.controller.AttendeeService.java'. The "go" method has an attribute "appVersion" that is displayed on the http://demo-url.cfapps.io/services page when you click the 'Start Load Test' button.
+- Commit and push code change to git.
+- Wait for zero downtime to start. With any luck, your app will switch from "1.0" to "2.0" with no errors.
+
+## Demo Flow - Canary
+- Run the "canary-push" task in concourse. Will be in the "Canary" pipeline.
+- Wait for concourse. With any luck, your app will switch from "2.0" to "CANARY" with no errors.
+- UAT test failure could happen if the test request takes longer than 200ms to return. If that happens, explain what the failure path for CANARY is. Notice that even though the deployment failed, the app never threw any errors.
 
