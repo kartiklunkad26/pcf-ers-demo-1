@@ -47,7 +47,7 @@ Then go to the http://localhost:8090 in your browser
 ## Concourse Setup - Assumes you are doing a PCF based deployment
 - git clone this repo into a new repository. You will need to check in code changes to trigger concourse CI/CD.
 
-- Make sure that you create a parameters.yml file with the following properties:
+- Make sure that you create a ./concourse/parameters.yml file with the following properties:
 ```
 PCF_TARGET_URL: api.run.pivotal.io
 PCF_DOMAIN: cfapps.io
