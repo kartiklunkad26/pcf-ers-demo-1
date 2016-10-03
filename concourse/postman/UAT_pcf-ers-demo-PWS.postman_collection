@@ -1,7 +1,7 @@
 {
 	"variables": [],
 	"info": {
-		"name": "UAT_pcf-ers-demo",
+		"name": "demo-pcf-ers",
 		"_postman_id": "50e868e3-d5d3-b856-927b-d259e2413790",
 		"description": "Verify that the application behaves as expected for users. ",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
@@ -19,7 +19,7 @@
 				}
 			],
 			"request": {
-				"url": "http://demo-jwilliams-canary.cfapps.io/services",
+				"url": "http://demo-pcf-ers.haas-63.pez.pivotal.io/services",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -42,7 +42,7 @@
 				}
 			],
 			"request": {
-				"url": "http://demo-jwilliams-canary.cfapps.io/go",
+				"url": "http://demo-pcf-ers.haas-63.pez.pivotal.io/go",
 				"method": "GET",
 				"header": [],
 				"body": {

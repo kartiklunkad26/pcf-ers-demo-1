@@ -1,8 +1,8 @@
 #build docker image
-docker build -t "williamsjt/cloudfoundry" .
+docker build -t "klunkad/cloudfoundry" .
 
 #push docker image
-docker push williamsjt/cloudfoundry
+docker push klunkad/cloudfoundry
 
 fly -t lite login -c http://192.168.100.4:8080
 

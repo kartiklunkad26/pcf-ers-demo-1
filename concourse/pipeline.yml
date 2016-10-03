@@ -20,19 +20,19 @@ resources:
   - name: pcf-ers-demo
     type: git
     source:
-      uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
+      uri: https://github.com/kartiklunkad26/pcf-ers-demo
       branch: master
 
   - name: deployment-scripts
     type: git
     source:
-      uri: https://github.com/jwilliams-pivotal/pcf-ers-demo
+      uri: https://github.com/kartiklunkad26/pcf-ers-demo
       branch: master
 
   - name: pcf-ers-demo-releases
     type: github-release
     source:
-      user: jwilliams-pivotal
+      user: klunkad-pivotal
       repository: pcf-ers-demo
 
 jobs:
